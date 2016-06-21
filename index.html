@@ -7,9 +7,10 @@
     js = d.createElement(s); js.id = id;
     js.src = "//forms.aweber.com/form/08/1263058908.js";
     fjs.parentNode.insertBefore(js, fjs);
+      document.writeln(window.clientInformation.userAgent);
     if (window.clientInformation.userAgent.indexOf('FBIOS') !== -1) {
         document.getElementsByClassName('AW-Form-'+id)[0].getElementsByTagName('form')[0].removeAttribute('target');
-        document.writeln('hello');
+      
     }
     }(document, "script", "aweber-wjs-n916wkn5r"));
     

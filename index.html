@@ -1,52 +1,707 @@
-(function() {
-    var r,
-        formString = "<style type=\"text/css\">#af-form-2037311921 .af-body .af-textWrap{width:98%;display:block;float:none;}#af-form-2037311921 .af-body .privacyPolicy{color:#000000;font-size:11px;font-family:Verdana, sans-serif;}#af-form-2037311921 .af-body a{color:#094C80;text-decoration:underline;font-style:normal;font-weight:normal;}#af-form-2037311921 .af-body input.text, #af-form-2037311921 .af-body textarea{background-color:#FFFFFF;border-color:#919191;border-width:1px;border-style:solid;color:#000000;text-decoration:none;font-style:normal;font-weight:normal;font-size:12px;font-family:Verdana, sans-serif;}#af-form-2037311921 .af-body input.text:focus, #af-form-2037311921 .af-body textarea:focus{background-color:#FFFAD6;border-color:#030303;border-width:1px;border-style:solid;}#af-form-2037311921 .af-body label.previewLabel{display:block;float:none;text-align:left;width:auto;color:#000000;text-decoration:none;font-style:normal;font-weight:normal;font-size:12px;font-family:Verdana, sans-serif;}#af-form-2037311921 .af-body{padding-bottom:15px;padding-top:15px;background-repeat:no-repeat;background-position:inherit;background-image:none;color:#000000;font-size:11px;font-family:Verdana, sans-serif;}#af-form-2037311921 .af-footer{padding-bottom:0px;padding-top:0px;padding-right:15px;padding-left:15px;background-color:#transparent;border-width:1px;border-bottom-style:none;border-left-style:none;border-right-style:none;border-top-style:none;color:#000000;font-size:12px;font-family:Verdana, sans-serif;}#af-form-2037311921 .af-header{padding-bottom:9px;padding-top:9px;padding-right:10px;padding-left:10px;background-image:url(\'https://forms.aweber.vm/images/auto/body/009/5ff/005/999\');background-position:top left;background-repeat:repeat-x;background-color:#005999;border-width:1px;border-bottom-style:none;border-left-style:none;border-right-style:none;border-top-style:none;color:#FFFFFF;font-size:16px;font-family:Verdana, sans-serif;}#af-form-2037311921 .af-quirksMode .bodyText{padding-top:2px;padding-bottom:2px;}#af-form-2037311921 .af-quirksMode{padding-right:15px;padding-left:15px;}#af-form-2037311921 .af-standards .af-element{padding-right:15px;padding-left:15px;}#af-form-2037311921 .bodyText p{margin:1em 0;}#af-form-2037311921 .buttonContainer input.submit{background-image:url(\"https://forms.aweber.vm/images/auto/gradient/button/07c.png\");background-position:top left;background-repeat:repeat-x;background-color:#0057ac;border:1px solid #0057ac;color:#FFFFFF;text-decoration:none;font-style:normal;font-weight:normal;font-size:14px;font-family:Verdana, sans-serif;}#af-form-2037311921 .buttonContainer input.submit{width:auto;}#af-form-2037311921 .buttonContainer{text-align:right;}#af-form-2037311921 body,#af-form-2037311921 dl,#af-form-2037311921 dt,#af-form-2037311921 dd,#af-form-2037311921 h1,#af-form-2037311921 h2,#af-form-2037311921 h3,#af-form-2037311921 h4,#af-form-2037311921 h5,#af-form-2037311921 h6,#af-form-2037311921 pre,#af-form-2037311921 code,#af-form-2037311921 fieldset,#af-form-2037311921 legend,#af-form-2037311921 blockquote,#af-form-2037311921 th,#af-form-2037311921 td{float:none;color:inherit;position:static;margin:0;padding:0;}#af-form-2037311921 button,#af-form-2037311921 input,#af-form-2037311921 submit,#af-form-2037311921 textarea,#af-form-2037311921 select,#af-form-2037311921 label,#af-form-2037311921 optgroup,#af-form-2037311921 option{float:none;position:static;margin:0;}#af-form-2037311921 div{margin:0;}#af-form-2037311921 fieldset{border:0;}#af-form-2037311921 form,#af-form-2037311921 textarea,.af-form-wrapper,.af-form-close-button,#af-form-2037311921 img{float:none;color:inherit;position:static;background-color:none;border:none;margin:0;padding:0;}#af-form-2037311921 input,#af-form-2037311921 button,#af-form-2037311921 textarea,#af-form-2037311921 select{font-size:100%;}#af-form-2037311921 p{color:inherit;}#af-form-2037311921 select,#af-form-2037311921 label,#af-form-2037311921 optgroup,#af-form-2037311921 option{padding:0;}#af-form-2037311921 table{border-collapse:collapse;border-spacing:0;}#af-form-2037311921 ul,#af-form-2037311921 ol{list-style-image:none;list-style-position:outside;list-style-type:disc;padding-left:40px;}#af-form-2037311921,#af-form-2037311921 .quirksMode{width:100%;max-width:225px;}#af-form-2037311921.af-quirksMode{overflow-x:hidden;}#af-form-2037311921{background-color:#F0F0F0;border-color:#CFCFCF;border-width:1px;border-style:solid;}#af-form-2037311921{display:block;}#af-form-2037311921{overflow:hidden;}.af-body .af-textWrap{text-align:left;}.af-body input.image{border:none!important;}.af-body input.submit,.af-body input.image,.af-form .af-element input.button{float:none!important;}.af-body input.text{width:100%;float:none;padding:2px!important;}.af-body.af-standards input.submit{padding:4px 12px;}.af-clear{clear:both;}.af-element label{text-align:left;display:block;float:left;}.af-element{padding-bottom:5px;padding-top:5px;}.af-form-wrapper{text-indent:0;}.af-form{text-align:left;margin:auto;}.af-header,.af-footer{margin-bottom:0;margin-top:0;padding:10px;}.af-quirksMode .af-element{padding-left:0!important;padding-right:0!important;}.lbl-right .af-element label{text-align:right;}body {}</style><form method=\"post\" class=\"af-form-wrapper\" accept-charset=\"UTF-8\" action=\"https://www.aweber.vm/scripts/addlead.pl\" target=\"_blank\" ><div style=\"display: none;\"><input type=\"hidden\" name=\"meta_web_form_id\" value=\"2037311921\" /><input type=\"hidden\" name=\"meta_split_id\" value=\"\" /><input type=\"hidden\" name=\"listname\" value=\"anewtestlist1\" /><input type=\"hidden\" name=\"redirect\" value=\"http://www.aweber.vm/form/thankyou.html\" id=\"redirect_129ae90bf647a21a675580dc6b6cae5f\" /><input type=\"hidden\" name=\"meta_adtracking\" value=\"My_Web_Form\" /><input type=\"hidden\" name=\"meta_message\" value=\"1\" /><input type=\"hidden\" name=\"meta_required\" value=\"name,email\" /><input type=\"hidden\" name=\"meta_tooltip\" value=\"\" /></div><div id=\"af-form-2037311921\" class=\"af-form\"><div id=\"af-header-2037311921\" class=\"af-header\"><div class=\"bodyText\"><p>&nbsp;</p></div></div><div id=\"af-body-2037311921\" class=\"af-body af-standards\"><div class=\"af-element\"><label class=\"previewLabel\" for=\"awf_field-10032653\">Name: </label><div class=\"af-textWrap\"><input id=\"awf_field-10032653\" type=\"text\" name=\"name\" class=\"text\" value=\"\"  onfocus=\" if (this.value == \'\') { this.value = \'\'; }\" onblur=\"if (this.value == \'\') { this.value=\'\';} \" tabindex=\"500\" /></div><div class=\"af-clear\"></div></div><div class=\"af-element\"><label class=\"previewLabel\" for=\"awf_field-10032654\">Email: </label><div class=\"af-textWrap\"><input class=\"text\" id=\"awf_field-10032654\" type=\"text\" name=\"email\" value=\"\" tabindex=\"501\" onfocus=\" if (this.value == \'\') { this.value = \'\'; }\" onblur=\"if (this.value == \'\') { this.value=\'\';} \" /></div><div class=\"af-clear\"></div></div><div class=\"af-element buttonContainer\"><input name=\"submit\" class=\"submit\" type=\"submit\" value=\"Submit\" tabindex=\"502\" /><div class=\"af-clear\"></div></div><div class=\"af-element privacyPolicy\" style=\"text-align: center\"><p>We respect your <a title=\"Privacy Policy\" href=\"https://www.aweber.com/permission.htm\" target=\"_blank\" rel=\"nofollow\">email privacy</a></p><div class=\"af-clear\"></div></div><div class=\"af-element poweredBy\" style=\"text-align: center; font-size: 9px;\"><p><a href=\"https://www.aweber.com\" title=\"AWeber Email Marketing\" target=\"_blank\" rel=\"nofollow\">Powered by AWeber Email Marketing</a></p><div class=\"af-clear\"></div></div></div><div id=\"af-footer-2037311921\" class=\"af-footer\"><div class=\"bodyText\"><p>&nbsp;</p></div></div></div></form><script type=\"text/javascript\">    <!--    (function() {        var IE = /*@cc_on!@*/false;        if (!IE) { return; }        if (document.compatMode && document.compatMode == \'BackCompat\') {            if (document.getElementById(\"af-form-2037311921\")) {                document.getElementById(\"af-form-2037311921\").className = \'af-form af-quirksMode\';            }            if (document.getElementById(\"af-body-2037311921\")) {                document.getElementById(\"af-body-2037311921\").className = \"af-body inline af-quirksMode\";            }            if (document.getElementById(\"af-header-2037311921\")) {                document.getElementById(\"af-header-2037311921\").className = \"af-header af-quirksMode\";            }            if (document.getElementById(\"af-footer-2037311921\")) {                document.getElementById(\"af-footer-2037311921\").className = \"af-footer af-quirksMode\";            }        }    })();    --></script>";
-    // Special handling for facebook iOS since it cannot open new windows
-    if (window.clientInformation.userAgent.indexOf('FBIOS') !== -1) {
-        replace(/ target=\"_blank\"/g, '');
-    }
-    try {
-        r = document.querySelectorAll('.AW-Form-2037311921');
-    }
-    catch (exception) {
-        // do nothing, the try catch is if the doctype is left as just HTML
-    }
-    if (r.length > 0) {
-        for(var i=0; i < r.length; i++){
-           var s = document.createElement('div');
-           s.innerHTML = formString;
-           r[i].insertBefore(s, r[i].firstChild);
-        }
-    } else {
-        document.write(formString);
-    }
-})();
+<html>
+    <body><!-- AWeber Web Form Generator 3.0.1 -->
 
-if (typeof window.awf_Form_=='undefined') window.awf_Form_ = new Object();
-awf_Form_.isPreview = false;
-awf_Form_.setCookie = function(name, value, expires, path, domain, secure) {
-    var curCookie = name + "=" + escape(value) +
-        ((expires) ? "; expires=" + expires.toGMTString() : "") +
-        ((path) ? "; path=" + path : "") +
-        ((domain) ? "; domain=" + domain : "") +
-        ((secure) ? "; secure" : "");
-    document.cookie = curCookie;
-}
+        <script type="text/javascript">
+        if (typeof window.awf_Form_=='undefined') window.awf_Form_ = new Object();
+            awf_Form_.isPreview = false;
+            awf_Form_.setCookie = function(name, value, expires, path, domain, secure) {
+                var curCookie = name + "=" + escape(value) +
+                    ((expires) ? "; expires=" + expires.toGMTString() : "") +
+                    ((path) ? "; path=" + path : "") +
+                    ((domain) ? "; domain=" + domain : "") +
+                    ((secure) ? "; secure" : "");
+                document.cookie = curCookie;
+            }
 
-awf_Form_.getCookie = function(name) {
-    var dc = document.cookie;
-    var prefix = name + "=";
-    var begin = dc.indexOf("; " + prefix);
-    if (begin == -1) {
-        begin = dc.indexOf(prefix);
-        if (begin != 0) return null;
-    } else
-        begin += 2;
-    var end = document.cookie.indexOf(";", begin);
-    if (end == -1)
-        end = dc.length;
-    return unescape(dc.substring(begin + prefix.length, end));
-}
+            awf_Form_.getCookie = function(name) {
+                var dc = document.cookie;
+                var prefix = name + "=";
+                var begin = dc.indexOf("; " + prefix);
+                if (begin == -1) {
+                    begin = dc.indexOf(prefix);
+                    if (begin != 0) return null;
+                } else
+                    begin += 2;
+                var end = document.cookie.indexOf(";", begin);
+                if (end == -1)
+                    end = dc.length;
+                return unescape(dc.substring(begin + prefix.length, end));
+            }
+            awf_Form_.showForm = function() {
+                /*@cc_on
+                /*@if (@_jscript_version > 5.5)
+                       var isIE = true;
+                  @else
+                       var deprecatedBrowser = true;
+                  @end @*/
+                if (typeof isIE == 'undefined') {
+                    var isIE = false;
+                }
+                if (!isIE && !window.XMLHttpRequest) {
+                    var deprecatedBrowser = true;
+                }
 
-var unique_track = new Image();
-        unique_track.src = "https://forms.aweber.vm/form/displays.htm?id=TAzM7MyMjJxMjA==";
+                // Exit early for TY Landing Page option
+                if (document.location.href.indexOf('meta_web_form_id') > 0) return;
+
+                if (deprecatedBrowser) {
+                   window.open('https://forms.aweber.com/form/73/167238473.html','winPopUp','resizable=1,scrollbars=1,location=0,width=418,height=581');
+                   awf_Form_.setExpirationCookie();
+                   return true;
+                }
+                // if (typeof awf_Form_.scriptAppended=='undefined') {
+                //     try {
+                //         var script = document.createElement('script');
+                //         script.src = "https://forms.aweber.com/form/styled_popovers_and_lightboxes.js";
+                //         script.type = 'text/javascript';
+                //         document.getElementsByTagName('HEAD')[0].appendChild(script);
+                //     } catch(e) {
+                //         //IE5 for Mac and IE timeout issues
+                //         try {
+                //             document.write('<script type="text/javascript" src="' + src + '"></scr'+'ipt>');
+                //         } catch(e) { }
+                //     }
+                //     awf_Form_.scriptAppended = true;
+                // }
+                var loadForm = function() {
+                    awf_Form_.form = new awf_Form_.AWFormGenerator( {"_log":null,"id":167238473,"form":"<form method=\"post\" class=\"af-form-wrapper\" accept-charset=\"UTF-8\" action=\"https:\/\/www.aweber.com\/scripts\/addlead.pl\" target=\"_blank\">\n<div style=\"display: none;\">\n<input type=\"hidden\" name=\"meta_web_form_id\" value=\"167238473\" \/>\n<input type=\"hidden\" name=\"meta_split_id\" value=\"\" \/>\n<input type=\"hidden\" name=\"listname\" value=\"awlist4224851\" \/>\n<input type=\"hidden\" name=\"redirect\" value=\"http:\/\/www.aweber.com\/thankyou.htm?m=default\" id=\"redirect_8978647ec90861d9ed7c8198214eb82b\" \/>\n\n<input type=\"hidden\" name=\"meta_adtracking\" value=\"Sign_Up_-_Light-box_-_No_New_Window\" \/>\n<input type=\"hidden\" name=\"meta_message\" value=\"1\" \/>\n<input type=\"hidden\" name=\"meta_required\" value=\"name,email\" \/>\n\n<input type=\"hidden\" name=\"meta_tooltip\" value=\"\" \/>\n<\/div>\n<div id=\"af-form-167238473\" class=\"af-form\"><div id=\"af-header-167238473\" class=\"af-header\"><div class=\"bodyText\"><p>&nbsp;<\/p><\/div><\/div>\n<div id=\"af-body-167238473\" class=\"af-body af-standards\">\n<div class=\"af-element\">\n<label class=\"previewLabel\" for=\"awf_field-83912732\">Name: <\/label>\n<div class=\"af-textWrap\">\n<input id=\"awf_field-83912732\" type=\"text\" name=\"name\" class=\"text\" value=\"\"  onfocus=\" if (this.value == '') { this.value = ''; }\" onblur=\"if (this.value == '') { this.value='';} \" tabindex=\"500\" \/>\n<\/div>\n<div class=\"af-clear\"><\/div><\/div>\n<div class=\"af-element\">\n<label class=\"previewLabel\" for=\"awf_field-83912733\">Email: <\/label>\n<div class=\"af-textWrap\"><input class=\"text\" id=\"awf_field-83912733\" type=\"text\" name=\"email\" value=\"\" tabindex=\"501\" onfocus=\" if (this.value == '') { this.value = ''; }\" onblur=\"if (this.value == '') { this.value='';} \" \/>\n<\/div><div class=\"af-clear\"><\/div>\n<\/div>\n<div class=\"af-element buttonContainer\">\n<input name=\"submit\" id=\"af-submit-image-167238473\" type=\"image\" class=\"image\" style=\"background: none; max-width: 100%;\" alt=\"Submit Form\" src=\"\/\/forms.aweber.com\/images\/forms\/big-sale\/blue\/circle-submit-button.png\" tabindex=\"502\" \/>\n<div class=\"af-clear\"><\/div>\n<\/div>\n<div class=\"af-element privacyPolicy\" style=\"text-align: center\"><p>We respect your <a title=\"Privacy Policy\" href=\"https:\/\/www.aweber.com\/permission.htm\" target=\"_blank\" rel=\"nofollow\">email privacy<\/a><\/p>\n<div class=\"af-clear\"><\/div>\n<\/div>\n<div class=\"af-element poweredBy\" style=\"text-align: center; font-size: 9px;\"><p><a href=\"https:\/\/www.aweber.com\" title=\"AWeber Email Marketing\" target=\"_blank\" rel=\"nofollow\">Powered by AWeber Email Marketing<\/a><\/p>\n<div class=\"af-clear\"><\/div>\n<\/div>\n<\/div>\n<div id=\"af-footer-167238473\" class=\"af-footer\"><div class=\"bodyText\"><p>&nbsp;<\/p><\/div><\/div>\n<\/div>\n<\/form>\n<script type=\"text\/javascript\">\n\/\/ Special handling for facebook iOS since it cannot open new windows\n(function() {\n    if (navigator.userAgent.indexOf('FBIOS') !== -1 || navigator.userAgent.indexOf('Twitter for iPhone') !== -1) {\n        document.getElementById('af-form-167238473').parentElement.removeAttribute('target');\n    }\n})();\n<\/script>","styles":"#af-form-167238473 .af-body .af-textWrap{width:98%;display:block;float:none;}\n#af-form-167238473 .af-body .privacyPolicy{color:#CCCCCC;font-size:11px;font-family:Verdana, sans-serif;}\n#af-form-167238473 .af-body a{color:#005C8A;text-decoration:underline;font-style:normal;font-weight:normal;}\n#af-form-167238473 .af-body input.text, #af-form-167238473 .af-body textarea{background-color:#FFFFFF;border-color:#005C8A;border-width:1px;border-style:solid;color:#C7C7C7;text-decoration:none;font-style:normal;font-weight:normal;font-size:18px;font-family:Trebuchet MS, sans-serif;}\n#af-form-167238473 .af-body input.text:focus, #af-form-167238473 .af-body textarea:focus{background-color:#FFFAD6;border-color:#005C8A;border-width:1px;border-style:solid;}\n#af-form-167238473 .af-body label.previewLabel{display:block;float:none;text-align:left;width:auto;color:#005C8A;text-decoration:none;font-style:normal;font-weight:normal;font-size:18px;font-family:Trebuchet MS, sans-serif;}\n#af-form-167238473 .af-body{padding-bottom:15px;padding-top:15px;background-repeat:no-repeat;background-position:inherit;background-image:none;color:#CCCCCC;font-size:11px;font-family:Verdana, sans-serif;}\n#af-form-167238473 .af-footer{padding-bottom:0px;padding-top:0px;padding-right:15px;padding-left:15px;background-color:#FFFFFF;background-repeat:no-repeat;background-position:top left;background-image:none;border-width:1px;border-bottom-style:none;border-left-style:none;border-right-style:none;border-top-style:none;color:#CCCCCC;font-size:12px;font-family:Verdana, sans-serif;}\n#af-form-167238473 .af-header{padding-bottom:100px;padding-top:100px;padding-right:10px;padding-left:10px;background-color:#FFFFFF;background-repeat:no-repeat;background-position:center;background-image:url(\"\/\/forms.aweber.com\/images\/forms\/big-sale\/blue\/pinecones-header.png\");border-width:1px;border-bottom-style:none;border-left-style:none;border-right-style:none;border-top-style:none;color:#CCCCCC;font-size:16px;font-family:Verdana, sans-serif;}\n#af-form-167238473 .af-quirksMode .bodyText{padding-top:2px;padding-bottom:2px;}\n#af-form-167238473 .af-quirksMode{padding-right:60px;padding-left:60px;}\n#af-form-167238473 .af-standards .af-element{padding-right:60px;padding-left:60px;}\n#af-form-167238473 .bodyText p{margin:1em 0;}\n#af-form-167238473 .buttonContainer input.submit{background-color:#0479C2;background-image:url(\"\/\/forms.aweber.com\/images\/forms\/big-sale\/blue\/circle-submit-button.png\");color:#FFFFFF;text-decoration:none;font-style:normal;font-weight:normal;font-size:24px;font-family:Helvetica, sans-serif;}\n#af-form-167238473 .buttonContainer input.submit{width:auto;}\n#af-form-167238473 .buttonContainer{text-align:center;}\n#af-form-167238473 body,#af-form-167238473 dl,#af-form-167238473 dt,#af-form-167238473 dd,#af-form-167238473 h1,#af-form-167238473 h2,#af-form-167238473 h3,#af-form-167238473 h4,#af-form-167238473 h5,#af-form-167238473 h6,#af-form-167238473 pre,#af-form-167238473 code,#af-form-167238473 fieldset,#af-form-167238473 legend,#af-form-167238473 blockquote,#af-form-167238473 th,#af-form-167238473 td{float:none;color:inherit;position:static;margin:0;padding:0;}\n#af-form-167238473 button,#af-form-167238473 input,#af-form-167238473 submit,#af-form-167238473 textarea,#af-form-167238473 select,#af-form-167238473 label,#af-form-167238473 optgroup,#af-form-167238473 option{float:none;position:static;margin:0;}\n#af-form-167238473 div{margin:0;}\n#af-form-167238473 fieldset{border:0;}\n#af-form-167238473 form,#af-form-167238473 textarea,.af-form-wrapper,.af-form-close-button,#af-form-167238473 img{float:none;color:inherit;position:static;background-color:none;border:none;margin:0;padding:0;}\n#af-form-167238473 input,#af-form-167238473 button,#af-form-167238473 textarea,#af-form-167238473 select{font-size:100%;}\n#af-form-167238473 p{color:inherit;}\n#af-form-167238473 select,#af-form-167238473 label,#af-form-167238473 optgroup,#af-form-167238473 option{padding:0;}\n#af-form-167238473 table{border-collapse:collapse;border-spacing:0;}\n#af-form-167238473 ul,#af-form-167238473 ol{list-style-image:none;list-style-position:outside;list-style-type:disc;padding-left:40px;}\n#af-form-167238473,#af-form-167238473 .quirksMode{width:100%;max-width:418px;}\n#af-form-167238473.af-quirksMode{overflow-x:hidden;}\n#af-form-167238473{background-color:#FFFFFF;border-color:#CFCFCF;border-width:1px;border-style:none;}\n#af-form-167238473{display:block;}\n.af-body .af-textWrap{text-align:left;}\n.af-body input.image{border:none!important;}\n.af-body input.submit,.af-body input.image,.af-form .af-element input.button{float:none!important;}\n.af-body input.text{width:100%;float:none;padding:2px!important;}\n.af-body.af-standards input.submit{padding:4px 12px;}\n.af-clear{clear:both;}\n.af-element label{text-align:left;display:block;float:left;}\n.af-element{padding-bottom:5px;padding-top:5px;}\n.af-form-wrapper{text-indent:0;}\n.af-form{text-align:left;margin:auto;}\n.af-header,.af-footer{margin-bottom:0;margin-top:0;padding:10px;}\n.af-quirksMode .af-element{padding-left:0!important;padding-right:0!important;}\n.dropShadowBottom167238473{background:url(https:\/\/forms.aweber.com\/images\/wfg\/drop-bottom.png) repeat-x;width:416px;height:10px;float:left;margin-bottom:0;line-height:0;font-size:0;padding:0;}\n.dropShadowL167238473{background:url(https:\/\/forms.aweber.com\/images\/wfg\/drop-left.png) repeat-y;line-height:0;font-size:0;width:10px;height:100%;float:left;margin-bottom:0;}\n.dropShadowLL167238473{background:url(https:\/\/forms.aweber.com\/images\/wfg\/drop-bottomLeft.png) no-repeat;width:10px;height:10px;float:left;margin-bottom:0;line-height:0;font-size:0;padding:0;}\n.dropShadowLR167238473{background:url(https:\/\/forms.aweber.com\/images\/wfg\/drop-bottomRight.png) no-repeat;width:10px;height:10px;float:left;margin-bottom:0;line-height:0;font-size:0;padding:0;}\n.dropShadowR167238473{background:url(https:\/\/forms.aweber.com\/images\/wfg\/drop-right.png) repeat-y;width:10px;height:100%;float:right;margin-bottom:0;}\n.dropShadowTop167238473{background:url(https:\/\/forms.aweber.com\/images\/wfg\/drop-top.png) repeat-x;width:416px;height:10px!important;line-height:0;font-size:0;float:left;margin-bottom:0;padding:0;}\n.dropShadowUL167238473{background:url(https:\/\/forms.aweber.com\/images\/wfg\/drop-topLeft.png) no-repeat;width:10px;height:10px!important;float:left;margin-bottom:0;line-height:0;font-size:0;padding:0;}\n.dropShadowUR167238473{background:url(https:\/\/forms.aweber.com\/images\/wfg\/drop-topRight.png) no-repeat;width:10px;line-height:0;font-size:0;height:10px!important;float:left;margin-bottom:0;padding:0;}\n.lbl-right .af-element label{text-align:right;}\nbody {\n}","height":"581","width":"418","plPath":"forms.aweber.com","delay":"0","popupURL":"https:\/\/forms.aweber.com\/form\/73\/167238473.html","formType":"lightbox","animation":"slide from top","redirectId":"redirect_8978647ec90861d9ed7c8198214eb82b","returnToPage":0} );
+                };
+                if (typeof awf_Form_.AWFormGenerator == 'undefined') {
+                    var unique_track = new Image();
+                    unique_track.src = "https://forms.aweber.com/form/displays.htm?id=jGzsTMwcLOzM";
+                    if (typeof awf_Form_.FormQueue == 'undefined') { awf_Form_.FormQueue = []; }
+                    awf_Form_.FormQueue.push(loadForm);
+                } else {
+                    var unique_track = new Image();
+                    unique_track.src = "https://forms.aweber.com/form/displays.htm?id=jGzsTMwcLOzM";
+                    loadForm();
+                }
+                awf_Form_.setExpirationCookie();
+            }
+
+            awf_Form_.setExpirationCookie = function() {
+                awf_Form_.expDate = new Date();
+                awf_Form_.expDate.setTime(awf_Form_.expDate.getTime() + -86400000);
+                awf_Form_.setCookie('awpopup_167238473', '1', awf_Form_.expDate, '/', document.domain, 0);
+            }
+            awf_Form_.setExpirationCookie()
+            if ((awf_Form_.isPreview || !awf_Form_.getCookie('awpopup_167238473')) && typeof hide_awf_Form=='undefined') {
+                awf_Form_.showForm();
+            }
+        </script>
+        <script>
+                    /**
+            * AWFormGenerator
+            *
+            * Creates an instance of a web form.
+            * @param {object}  properties  Key value pairs of properties used in
+            *      generating the form.  The properties specified below can be
+            *      passed in as arguments.
+            * @access public
+            * @return void
+            */
+            awf_Form_.AWFormGenerator = function(properties) {
+
+            this.delay = 1;
+            this.form = '';
+            this.formType = 'popover';
+            this.plPath = 'www.aweber.com';
+            this.closeButtonPath = '/images/closebox.png';
+            this.closeButtonGIF  = '/images/closebox.gif';
+            this.closeButtonClass = 'af-form-close-button';
+            this.animation = 'bottom';
+            this.width = 400;
+            this.height = 400;
+            this.timeOut = false;
+            this.div = document.createElement('DIV');
+            this.xIncrement = 10;
+            this.frameSpeed = 1;
+            this.opacityIncrement = 5;
+            this.yIncrement = 10;
+            this.easingPercent = 0.2;
+            this.popOverZIndex = 10000;
+            this.redirectId = false;
+            this.returnToPage = 0;
+            this.quirksMode = false; // Currently, only correct for IE
+
+            /*@if(true)
+                   this.IE = true;
+              @end @*/
+            if (this.IE && !window.XMLHttpRequest) {
+                this.IE6 = true;
+            }
+            if (this.IE && window.msPerformance) {
+                this.IE9 = true;
+                this.xIncrement = this.yIncrement = 70; // animation fixes
+            }
+            if ('opacity' in document.body.style) {
+                this.hasOpacity = true;
+            }
+            if (this.IE) this.opacityIncrement = 20;
+
+            for (property in properties) {
+                this[property] = properties[property];
+            }
+
+            if (this.IE) {
+                // Snag IE render mode
+                if (document.compatMode && document.compatMode == 'BackCompat') {
+                    this.quirksMode = true;
+                }
+
+                // Load the styles BEFORE the delay
+                // This way, we can start downloading images in advance
+                var cssNode = document.createElement('style');
+                cssNode.type = 'text/css';
+                cssNode.rel = 'stylesheet';
+                cssNode.media = 'screen';
+                cssNode.title = 'dynamicSheet';
+                document.getElementsByTagName("head")[0].appendChild(cssNode);
+                if (!document.styleSheets) {
+                    document.styleSheets = [{cssText: this.styles}];
+                } else if (!document.styleSheets[0]) {
+                    document.styleSheets = [{cssText: this.styles}];
+                } else {
+                    document.styleSheets[0].cssText += this.styles;
+                }
+            } else {
+                var styleBlock = document.createElement('DIV');
+                styleBlock.innerHTML = '<style type="text/css">'+this.styles+'</style>';
+                document.getElementsByTagName('body')[0].appendChild(styleBlock);
+            }
+
+            /**
+             * Creates an instance of light box.
+             */
+            this.initialize = function() {
+
+                this.recordScrollPosition();
+                this.div.innerHTML = this.form;
+                this.div.style.position = 'absolute';
+                if (this.width == 'auto') {
+                    this.div.style.width = this.width;
+                } else {
+                    this.div.style.width = this.width+'px';
+                }
+                if (this.height == 'auto') {
+                    this.div.style.height = this.height;
+                } else {
+                    this.div.style.height = this.height+'px';
+                }
+
+                if (this.animation == 'fade in') {
+                    this.curOpacity = 0;
+                    this.div.style.MozOpacity = this.curOpacity;
+                    this.div.style.opacity = this.curOpactiy;
+                    if (this.IE && !this.hasOpacity) {
+                        this.div.style.filter = 'alpha(opacity='+this.curOpacity+')';
+                    } else {
+                        this.div.style.MozOpacity = this.curOpacity;
+                        this.div.style.opacity = this.curOpactiy;
+                    }
+                }
+
+                document.getElementsByTagName('body')[0].appendChild(this.div);
+
+                // Will the entire form fit inside the viewport?
+                this.formFits = !!((this.windowEdgeY - this.windowY) > this.height);
+                if (this.formFits && this.formType == 'lightbox') this.lockScrolling();
+
+                // Calculate initial positions based on animation
+                this.stopPositionX = this.calculateStopPosition('x');
+                this.stopPositionY = this.calculateStopPosition('y');
+
+                switch(this.animation) {
+                    case 'slide from left':
+                        this.curPositionY = this.stopPositionY;
+                        this.curPositionX = (this.windowX-this.width);
+                        this.yIncrement = 0;
+                        break;
+
+                    case 'slide from top':
+                        this.curPositionY = (this.windowY-this.height);
+                        this.curPositionX = this.stopPositionX;
+                        this.xIncrement = 0;
+                        break;
+
+                    case 'slide from right':
+                        this.curPositionY = this.stopPositionY;
+                        this.curPositionX = (parseInt(this.windowEdgeX)+parseInt(this.width));
+                        this.xIncrement = -1*this.xIncrement;
+                        this.yIncrement = 0;
+                        break;
+
+                    case 'slide from bottom':
+                        this.curPositionY = (parseInt(this.windowEdgeY)+parseInt(this.height));
+                        this.curPositionX = this.stopPositionX;
+                        this.yIncrement = -1*this.yIncrement;
+                        this.xIncrement = 0;
+                        break;
+                    case 'default':
+                    default:
+                        this.curPositionY = this.stopPositionY;
+                        this.curPositionX = this.stopPositionX;
+                        this.yIncrement = 0;
+                        this.xIncrement = 0;
+                        break;
+
+                }
+
+                if (this.formType == 'lightbox') {
+                    this.showOverlay();
+                }
+
+                if (this.quirksMode) {
+                    var body = document.getElementById('af-body-'+this.id);
+                    if (body) {
+                        body.className = 'af-body inline af-quirksMode';
+                    }
+                    var header = document.getElementById('af-header-'+this.id);
+                    if (header) {
+                        header.className = 'af-header af-quirksMode';
+                    }
+                    var footer = document.getElementById('af-footer-'+this.id);
+                    if (footer) {
+                        footer.className = 'af-footer af-quirksMode';
+                    }
+                }
+
+                this.showShadow();
+                this.attachImageLoads();
+                var form = '';
+                me = this;
+                if (document.getElementById('af-iframe-'+this.id) == null) {
+                    form = document.getElementById('af-form-'+this.id);
+                }
+                else {
+                    form = document.getElementById('af-iframe-'+this.id);
+                }
+                this.resizePopUp();
+                this.addEvent(form, 'load', function() { me.resizePopUp(); });
+                this.processRedirect();
+
+                this.div.style.top  = Math.floor(this.curPositionY)+'px';
+                this.div.style.left = Math.floor(this.curPositionX)+'px';
+
+                this.div.style.zIndex = this.popOverZIndex;
+                this.div.id = 'popForm-'+this.id;
+
+                this.closeButtonId = 'close_Button_'+this.id+'_'+Math.floor(Math.random()*1000000)+'_'+Math.floor(Math.random()*1000000);
+                this.closeButton = new Image();
+                this.closeButton.id = this.closeButtonId;
+                this.closeButton.className = this.closeButtonClass;
+
+                // Use GIF not PNG for IE6
+                if (this.IE6) this.closeButtonPath = this.closeButtonGIF;
+                this.closeButton.src = 'http://' + this.plPath + this.closeButtonPath;
+                this.closeButton.style.position = 'absolute';
+                this.closeButton.style.top  = (parseInt(this.curPositionY)-10)+'px';
+                this.closeButton.style.left = (parseInt(this.curPositionX)+(this.width - 20))+'px';
+                this.closeButton.style.zIndex = this.popOverZIndex+20;
+                document.getElementsByTagName('body')[0].appendChild(this.closeButton);
+
+                this.distanceX = Math.abs(this.curPositionX - this.stopPositionX);
+                this.distanceY = Math.abs(this.curPositionY - this.stopPositionY);
+                var myself = this;
+                this.closeButton.onclick = function() { myself.closeForm(); }
+                this.addEvent (window, 'keypress', function(e) {
+                    var evt = e || window.evt;
+                    var charCode = evt.charCode || evt.keyCode;
+                    if (charCode==27) {
+                        myself.closeForm();
+                    }
+                });
+
+                if (this.animation == 'fade in') {
+                    if (this.formType == 'lightbox' && this.IE6) {
+                        this.opacityIncrement = 20;
+                    }
+                    this.fadeDiv();
+                } else {
+                    this.moveDiv(this.xIncrement, this.yIncrement, this.frameSpeed);
+                }
+                // Special handling for facebook iOS since it cannot open new windows
+                if (navigator.userAgent.indexOf('FBIOS') !== -1 || navigator.userAgent.indexOf('Twitter for iPhone') !== -1) {
+                    document.getElementById('af-form-'+this.id).parentElement.removeAttribute('target');
+                }
+                // Optional callback
+                if (window.postFormAppend) {
+                    postFormAppend();
+                }
+            }
+
+            this.processRedirect = function() {
+                if ((parseInt(this.returnToPage)==1) && this.redirectId) {
+                    var redirect = document.getElementById(this.redirectId);
+                    if (redirect) {
+                        redirect.value = document.location;
+                    }
+                }
+            }
+
+            this.addEvent = function(obj, event, func) {
+                if (obj.addEventListener) {
+                    obj.addEventListener(event, func, false);
+                    return true;
+                } else if (obj.attachEvent){
+                    var newEvent = obj.attachEvent("on"+event, func);
+                    return newEvent;
+                }
+            }
+
+            this.attachImageLoads = function() {
+                var images = this.div.getElementsByTagName('img');
+                var me = this;
+                var update = function() { me.resizePopUp(); };
+
+                // If the submit button was an image, it would have this id.
+                var submitButton = document.getElementById('af-submit-image-'+this.id);
+                if (submitButton) {
+                    this.addEvent(submitButton, 'load', update);
+                }
+                var i = images.length;
+                while (i > 0 ) {
+                    i--;
+                    this.addEvent(images[i], 'load', update);
+                }
+            }
+
+            this.resizePopUp = function() {
+                var form = '';
+                var isFacebookShown = false;
+                if (document.getElementById('af-iframe-'+this.id) == null) {
+                    form = document.getElementById('af-form-'+this.id);
+                }
+                else {
+                    form = document.getElementById('af-iframe-'+this.id);
+                    isFacebookShown = true;
+                }
+                var oldHeight = this.height;
+                var oldWidth  = this.width;
+                if (this.IE){
+                    var height = form.offsetHeight;
+                    var width  = form.offsetWidth;
+                } else {
+                    var height = document.defaultView.getComputedStyle(form, '').getPropertyValue("height");
+                    var width = document.defaultView.getComputedStyle(form, '').getPropertyValue("width");
+                    height = height.replace('px','');
+                    width = width.replace('px', '');
+                }
+                height = parseInt(height);
+                width = parseInt(width);
+
+                if (isFacebookShown) {
+                    height = height - 18;
+                    if(this.IE) {
+                        width = width - 19;
+                    } else {
+                        width = width - 15;
+                    }
+                }
+
+                if (oldHeight != height) {
+                    this.height = height;
+                    this.div.style.height = height+'px';
+                    this.stopPositionY = this.calculateStopPosition('y');
+
+                    if (this.shadow) {
+                        this.shadow.style.height = height+'px';
+                    }
+                }
+                if (oldWidth != width) {
+                    this.width  = width;
+                    this.div.style.width  = width+'px';
+                    this.calculateStopPosition('x');
+                    this.stopPositionX = this.calculateStopPosition('x');
+                }
+                this.div.style.overflow = 'hidden';
+            }
+
+            this.getDocumentHeight = function() {
+                var D = document;
+                return Math.max(
+                        Math.max(D.body.scrollHeight, D.documentElement.scrollHeight),
+                        Math.max(D.body.offsetHeight, D.documentElement.offsetHeight),
+                        Math.max(D.body.clientHeight, D.documentElement.clientHeight)
+                        );
+            }
+
+            this.closeForm = function() {
+                if (this.closeButton.parentNode) {
+                    // Only run these the first time a lightbox is closed
+                    this.closeButton.parentNode.removeChild(this.closeButton);
+                    this.div.parentNode.removeChild(this.div);
+                }
+                if (this.formType == 'lightbox') {
+                    this.hideOverlay();
+                }
+                if (this.shadow) {
+                    this.hideShadow();
+                }
+                this.unlockScrolling();
+                this.closeButton.style.display = 'none';
+            }
+
+            this.fadeDiv = function() {
+                clearTimeout(this.timeOut);
+                if (this.curOpacity < 100) {
+                    this.curOpacity += this.opacityIncrement;
+                    if (this.curOpacity > 100) {
+                        this.curOpacity = 100;
+                    }
+                    if (this.IE && !this.hasOpacity) {
+                        this.div.style.filter = 'alpha(opacity='+this.curOpacity+')';
+                    } else {
+                        this.div.style.MozOpacity = (this.curOpacity/100);
+                        this.div.style.opacity = (this.curOpacity/100);
+                    }
+                    if (typeof this.overlay != 'undefined') {
+                        this.overlay.style.MozOpacity = (this.curOpacity/100)*0.8;
+                        if (this.IE && !this.hasOpacity) {
+                            this.overlay.style.filter = 'alpha(opacity='+(0.8*this.curOpacity)+')';
+                        } else {
+                            this.overlay.style.MozOpacity = (this.curOpacity/100)*0.8;
+                            this.overlay.style.opacity = (this.curOpacity/100)*0.8;
+                        }
+                    }
+                    if (typeof this.shadow != 'undefined') {
+                        this.shadow.style.MozOpacity = (this.curOpacity/100);
+                        if (this.IE && !this.hasOpacity) {
+                            this.shadow.style.filter = 'alpha(opacity='+(this.curOpacity)+')';
+                        } else {
+                            this.shadow.style.MozOpacity = (this.curOpacity/100);
+                            this.shadow.style.opacity = (this.curOpacity/100);
+                        }
+                    }
+
+                    var me = this;
+                    this.timeOut = setTimeout(function() {
+                            me.fadeDiv();
+                        }, this.frameSpeed);
+
+                } else {
+                    this.div.style.filter = 'none'; // Removes black border on forms in IE
+                }
+            }
+
+            /**
+             * Records the scroll position of where the customer currently is on the
+             * page. This is used to calculate the starting and ending position of the form,
+             * as well as prevent the customer from scrolling while the form is displayed.
+             * @return void
+             */
+            this.recordScrollPosition = function() {
+                // windowX/Y is the upper-left corner of viewport
+                // windowEdgeX/Y is the lower-right corner
+
+                this.windowX = document.body.scrollLeft || window.pageXOffset || document.documentElement.scrollLeft;
+                this.windowY = document.body.scrollTop || window.pageYOffset  || document.documentElement.scrollTop;
+
+
+                if (typeof window.innerWidth != 'undefined') {
+                    this.windowEdgeX = this.windowX + window.innerWidth;
+                    this.windowEdgeY = this.windowY + window.innerHeight;
+                } else if (typeof document.body.offsetWidth != 'undefined') {
+                    this.windowEdgeX = this.windowX + document.body.offsetWidth;
+                    this.windowEdgeY = this.windowY + document.body.offsetHeight;
+                }
+                if (this.IE && !this.quirksMode) {
+                    this.windowEdgeX = document.documentElement.clientWidth;
+                    this.windowEdgeY = document.documentElement.clientHeight;
+                }
+            }
+
+            /**
+             * Scrolls the window back into place if the user tries to move.
+             */
+            this.scrollBackToPlace = function() {
+                if (awf_Form_.form.scrollLock)
+                    window.scrollTo(parseInt(awf_Form_.form.windowX), parseInt(awf_Form_.form.windowY));
+            }
+
+            this.unlockScrolling = function() {
+                document.body.style.overflow = 'auto';
+                awf_Form_.form.scrollLock = false;
+            }
+
+            /**
+             * Freezes the window to the current position of windowY and windowX if the
+             * user attempts to scroll.
+             */
+            this.lockScrolling = function() {
+                if (typeof awf_Form_.form.scrollLock=='undefined') {
+                    // Only add the event once
+                    this.addEvent(document, 'scroll', function(){
+                            awf_Form_.form.scrollBackToPlace();
+                    });
+                }
+                awf_Form_.form.scrollLock = true;
+                document.body.style.overflow = 'hidden';
+            }
+
+            this.showOverlay = function() {
+                this.overlay = document.createElement('DIV');
+                this.overlay.style.width   = '120%';
+                this.overlay.style.height = this.getDocumentHeight() + 'px';
+                this.overlay.style.position = 'absolute';
+                this.overlay.style.top      = 0;
+                this.overlay.style.left     = 0;
+                this.overlay.style.backgroundColor = '#000000';
+                this.overlay.style.zIndex = this.popOverZIndex-2;
+                document.getElementsByTagName('body')[0].appendChild(this.overlay);
+                if (this.animation == 'fade in') {
+                    if (this.IE  && !this.hasOpacity) {
+                        this.overlay.style.filter = 'alpha(opacity=0)';
+                    } else {
+                        this.overlay.style.MozOpacity = 0;
+                        this.overlay.style.opacity = 0;
+                    }
+                } else {
+                    if (this.IE  && !this.hasOpacity) {
+                        this.overlay.style.filter = 'alpha(opacity=80)';
+                    } else {
+                        this.overlay.style.MozOpacity = 0.8;
+                        this.overlay.style.opacity = 0.8;
+                    }
+                }
+            }
+
+
+            this.showShadow = function() {
+                if (this.IE && this.animation == 'fade in') {
+                    return false;
+                }
+                // Create drop shadow - not in IE6
+                if (!this.IE6) {
+                    this.shadow = document.createElement('DIV');
+                    this.shadow.style.zIndex = this.popOverZIndex-1;
+                    this.shadow.innerHTML =
+                        '<div class="dropShadowUL'+this.id+'"></div><div class="dropShadowTop'+this.id+'"></div><div class="dropShadowUR'+this.id+'"></div><div class="af-clear"></div>'+
+                        '<div class="dropShadowL'+this.id+'"></div><div class="dropShadowR'+this.id+'"></div><div class="af-clear"></div>'+
+                        '<div class="dropShadowLL'+this.id+'"></div><div class="dropShadowBottom'+this.id+'"></div><div class="dropShadowLR'+this.id+'"></div><div class="af-clear"></div>';
+                    document.getElementsByTagName('body')[0].appendChild(this.shadow);
+                    this.shadow.style.width  = (parseInt(this.width)+18)+'px';
+                    this.shadow.style.height = '0px';
+                    this.shadow.style.position = 'absolute';
+
+                    this.shadow.style.top  = (parseInt(this.curPositionY)-10)+'px';
+                    this.shadow.style.left = (parseInt(this.curPositionX)-9)+'px';
+                    if (this.animation == 'fade in') {
+                        if (this.IE  && !this.hasOpacity) {
+                            this.shadow.style.filter = 'alpha(opacity=0)';
+                        } else {
+                            this.shadow.style.MozOpacity = 0;
+                            this.shadow.style.opacity = 0;
+                        }
+                    }
+                }
+            }
+
+            this.hideOverlay = function() {
+                this.overlay.style.display = 'none';
+                if (this.overlay.parentNode)
+                    this.overlay.parentNode.removeChild(this.overlay);
+            }
+
+            this.hideShadow = function() {
+                this.shadow.style.display = 'none';
+                if (this.shadow.parentNode)
+                    this.shadow.parentNode.removeChild(this.shadow);
+            }
+
+            /**
+             * Increments the div's position so that it ends up where we want it to.
+             */
+            this.moveDiv = function(xIncrement, yIncrement, frameSpeed) {
+                clearTimeout(this.timeOut);
+                var movedX = false;
+                var movedY = false;
+                var percentLeft = 0;
+                if (xIncrement != 0 && (Math.abs(this.curPositionX - this.stopPositionX) > Math.abs(xIncrement))) {
+
+                    // Easing! Pull the xIncrement closer to 0 as we approach our stopPosition
+                    percentLeft = (Math.abs(this.curPositionX - this.stopPositionX) / this.distanceX);
+                    if (percentLeft < this.easingPercent) {
+                        // If there is less than 20% of the distance to travel left, start scaling down
+                        // the increments.
+                        var curX = xIncrement * (percentLeft * (1/this.easingPercent));
+
+                        // If we've descreased below 1, make it 1. Use curX / curX to account
+                        // for positives or negatives.
+                        if (Math.abs(curX) < 1) {
+                            curX = 1 * (curX / Math.abs(curX));
+                        }
+                    } else {
+                        var curX = xIncrement;
+                    }
+                    this.curPositionX = Math.floor(this.curPositionX + Math.round(curX));
+                    this.div.style.left = this.curPositionX+'px';
+                    this.closeButton.style.left = (parseInt(this.curPositionX)+(this.width - 20))+'px';
+                    if (this.shadow) {
+                        this.shadow.style.left = (parseInt(this.curPositionX)-9)+'px';
+                    }
+                    movedX = true;
+                }
+                if ((yIncrement != 0) && (Math.abs(this.curPositionY - this.stopPositionY) > Math.abs(yIncrement))) {
+
+                    // Easing! Pull the xIncrement closer to 0 as we approach our stopPosition
+                    percentLeft = (Math.abs(this.curPositionY - this.stopPositionY) / this.distanceY);
+                    if (percentLeft < this.easingPercent) {
+                        // If there is less than 20% of the distance to travel left, start scaling down
+                        // the increments.
+                        var curY = yIncrement * (percentLeft * (1/this.easingPercent));
+
+                        if (Math.abs(curX) < 1) {
+                            curX = 1 * (curX / Math.abs(curX));
+                        }
+                    } else {
+                        var curY = yIncrement;
+                    }
+                    this.curPositionY = Math.floor(this.curPositionY + Math.round(curY));
+                    this.div.style.top = this.curPositionY+'px';
+                    this.closeButton.style.top  = (parseInt(this.curPositionY)-10)+'px';
+                    if (this.shadow) {
+                        this.shadow.style.top = (parseInt(this.curPositionY)-10)+'px';
+                    }
+
+                    movedY = true;
+                }
+
+                if (movedY || movedX) {
+                    var myself = this;
+                    this.timeOut = setTimeout(function() {
+                        myself.moveDiv(xIncrement, yIncrement, frameSpeed);
+                    }, frameSpeed);
+                }
+            }
+
+            this.calculateStopPosition = function(direction) {
+                if (direction == 'x') {
+                    return ((this.windowEdgeX-this.windowX)/2)+this.windowX-(this.width/2);
+                } else {
+                    if (!this.formFits) {
+                        // default to top if it wouldn't fit anyway
+                        return this.windowY + 30;
+                    } else {
+                        return ((this.windowEdgeY-this.windowY)/2)+this.windowY-(this.height/2);
+                    }
+                }
+            }
+
+            // Set a delay, then initialize the form
+            var myself = this;
+            setTimeout(function() {
+                    myself.initialize();
+                }, (this.delay*1000));
+            }
+
+            if (awf_Form_.FormQueue) {
+            for(func in awf_Form_.FormQueue) {
+                if (typeof awf_Form_.FormQueue[func] == 'function') { awf_Form_.FormQueue[func](); }
+            }
+            }
+        </script>
+        <div class="AW-Form-167238473"></div>
+
+    </body>
+</html>
